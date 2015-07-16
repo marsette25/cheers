@@ -1,1 +1,12 @@
-﻿<Properties StartupItem="cheers/cheers.csproj" />
+﻿<Properties StartupItem="cheers/cheers.csproj">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="cheers/MyClass.cs">
+    <Files>
+      <File FileName="cheers/MyClass.cs" Line="15" Column="4" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+</Properties>

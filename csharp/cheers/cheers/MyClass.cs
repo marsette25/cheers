@@ -12,7 +12,7 @@ namespace cheers
 
 		//for (int i = 0; i < names.Length; i++)
  
-		{
+		
 			 Console.WriteLine("Give me a {0}");
 		}
 	}
