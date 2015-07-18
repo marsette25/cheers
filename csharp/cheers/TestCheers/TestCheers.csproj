@@ -3,10 +3,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{D4D10943-A529-4E1E-B157-41E5D1107FB3}</ProjectGuid>
+    <ProjectGuid>{D1C5B257-E700-4408-961C-CE9D48E5201D}</ProjectGuid>
     <OutputType>Library</OutputType>
-    <RootNamespace>cheers</RootNamespace>
-    <AssemblyName>cheers</AssemblyName>
+    <RootNamespace>TestCheers</RootNamespace>
+    <AssemblyName>TestCheers</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
@@ -29,11 +29,21 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
+    <Reference Include="nunit.framework">
+      <HintPath>..\packages\NUnit.2.6.3\lib\nunit.framework.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Program.cs" />
-    <Compile Include="Cheers.cs" />
+    <Compile Include="Test.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\cheers\cheers.csproj">
+      <Project>{D4D10943-A529-4E1E-B157-41E5D1107FB3}</Project>
+      <Name>cheers</Name>
+    </ProjectReference>
+  </ItemGroup>
 </Project>

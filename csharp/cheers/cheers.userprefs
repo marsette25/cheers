@@ -1,8 +1,11 @@
 ﻿<Properties StartupItem="cheers/cheers.csproj">
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="cheers/MyClass.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="cheers/Cheers.cs">
     <Files>
-      <File FileName="cheers/MyClass.cs" Line="15" Column="4" />
+      <File FileName="cheers/Cheers.cs" Line="10" Column="9" />
+      <File FileName="cheers/EmptyClass.cs" Line="1" Column="1" />
+      <File FileName="cheers/Program.cs" Line="1" Column="1" />
+      <File FileName="TestCheers/Test.cs" Line="15" Column="9" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
