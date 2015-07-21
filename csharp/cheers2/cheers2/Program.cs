@@ -36,19 +36,29 @@ namespace cheers2
 
 			//parse the birthdate
 			DateTime startDate = DateTime.Parse (birthday);
+			Console.WriteLine (startDate);
 
 			//get the day's date
 			DateTime now = DateTime.Now;
 
+		
 			//this is suppsed to give me days until but it is giving me days ago.
 			TimeSpan elapsed = startDate.Subtract (now);
-
+			{
+				Console.Write (elapsed);
+			}
+		
 
 			var daysFromNow = elapsed.TotalDays;
 
-			Console.WriteLine("{0} is {1} days from now", startDate, daysFromNow.ToString("0"));
+			TimeSpan span1 = TimeSpan.FromDays (365);
+			TimeSpan span2 = span1.Add(elapsed);
+				Console.Write (span2);
 
-			Console.WriteLine ("Please enter a positive integer: ");
+			Console.WriteLine ("{0} was {1} days from ago", startDate, daysFromNow.ToString ("0"));
+
+
+			Console.WriteLine ("Please enter" + " a positive integer: ");
 			int upperLimit = int.Parse(Console.ReadLine ());
 			List<int> evenintegers = new List<int>();
 
