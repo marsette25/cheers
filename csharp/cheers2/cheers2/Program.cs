@@ -17,6 +17,9 @@ namespace cheers2
 			name = Console.ReadLine();
 			name = name.ToLower();
 
+			//get the user's birthday 
+			Console.Write("Enter your birthday MM/DD: ");
+			string birthday = Console.ReadLine ();
 
 			//by using foreach, we do not have to write a loop. which is so nice. this says, for each letter in name, do the below. i like foreach better than for loops
 			foreach (var letter in name)
@@ -30,33 +33,26 @@ namespace cheers2
 			//tell the user the how grand they are
 			Console.WriteLine("{0} is.. grand!!!", name);
 
-			//get the user's birthday 
-			Console.Write("Enter your birthday MM/DD: ");
-			string birthday = Console.ReadLine ();
-
-			//parse the birthdate
-			DateTime startDate = DateTime.Parse (birthday);
-//			Console.WriteLine (startDate);
-
-			//get the day's date
-			DateTime now = DateTime.Now;
-
-		
-			//this is suppsed to give me days until but it is giving me days ago.
-			TimeSpan elapsed = startDate.Subtract (now);
-//				Console.Write (elapsed);
-
-		
-
-			var daysFromNow = elapsed.TotalDays;
-
-			TimeSpan span1 = TimeSpan.FromDays (365);
-			TimeSpan span2 = span1.Add(elapsed);
-//				Console.Write (span2);
-
-			Console.WriteLine ("{0} is {1} days from now", startDate, span2.ToString ());
+			//get birthday dates parsed 
+			TimeSpan conversion = DateTime.Now.Subtract(DateTime.Parse(birthday));
+			double daysFromNow = conversion.TotalDays;
 
 
+			int difference = 0; 
+
+			//tell the user happy birthday or how many days away their birthday is
+			DateTime lastDay = new DateTime(2015,12,31);
+			if (DateTime.Today < DateTime.Parse(birthday)) {
+				difference = DateTime.Parse(birthday).DayOfYear - DateTime.Today.DayOfYear;
+
+			} else {
+				difference = lastDay.DayOfYear - DateTime.Today.DayOfYear + DateTime.Parse(birthday).DayOfYear;
+			}
+
+			Console.WriteLine("Your birthday is in {0} days ", difference);
+
+
+			// this is an integer app
 //			Console.WriteLine ("Please enter" + " a positive integer: ");
 //			int upperLimit = int.Parse(Console.ReadLine ());
 //			List<int> evenintegers = new List<int>();
